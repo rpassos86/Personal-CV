@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading... | Reinaldo Passos Jr</title>
+    <meta name="description" content="Personal Portfolio - Loading...">
+    <meta name="robots" content="noindex, nofollow">
+    
+    <!-- Fallback redirect (works without JavaScript) -->
+    <meta http-equiv="refresh" content="4;url=index-en.html">
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* ========================================
+           SPLASH PAGE - ULTRA TECH INTRO
+        ======================================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Rajdhani', sans-serif;
+            background: #050a14;
+            min-height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        /* Animated Background */
+        .splash-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+        
+        /* Particle Canvas */
+        #particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        /* Grid Effect */
+        .grid-effect {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(0, 245, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 245, 255, 0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
+            animation: gridMove 20s linear infinite;
+        }
+        
+        @keyframes gridMove {
+            0% { transform: perspective(500px) rotateX(60deg) translateY(0); }
+            100% { transform: perspective(500px) rotateX(60deg) translateY(50px); }
+        }
+        
+        /* Glow Orbs */
+        .orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: 0.4;
+            animation: orbFloat 8s ease-in-out infinite;
+        }
+        
+        .orb-1 {
+            width: 400px;
+            height: 400px;
+            background: #00f5ff;
+            top: -200px;
+            left: -100px;
+            animation-delay: 0s;
+        }
+        
+        .orb-2 {
+            width: 300px;
+            height: 300px;
+            background: #ff00ff;
+            bottom: -150px;
+            right: -100px;
+            animation-delay: -2s;
+        }
+        
+        .orb-3 {
+            width: 200px;
+            height: 200px;
+            background: #00ff88;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation-delay: -4s;
+        }
+        
+        @keyframes orbFloat {
+            0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.4; }
+            25% { transform: translate(30px, -30px) scale(1.1); opacity: 0.5; }
+            50% { transform: translate(-20px, 20px) scale(0.9); opacity: 0.3; }
+            75% { transform: translate(20px, 10px) scale(1.05); opacity: 0.45; }
+        }
+        
+        /* Main Container */
+        .splash-container {
+            position: relative;
+            z-index: 10;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        /* Logo/Initials */
+        .initials {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(4rem, 15vw, 10rem);
+            font-weight: 900;
+            background: linear-gradient(135deg, #00f5ff, #ff00ff, #00f5ff);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradientShift 3s ease infinite, glowPulse 2s ease-in-out infinite;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+        
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        @keyframes glowPulse {
+            0%, 100% { 
+                filter: drop-shadow(0 0 20px rgba(0, 245, 255, 0.5));
+                transform: scale(1);
+            }
+            50% { 
+                filter: drop-shadow(0 0 40px rgba(255, 0, 255, 0.8));
+                transform: scale(1.02);
+            }
+        }
+        
+        /* Tech Circle Animation */
+        .tech-circle {
+            position: absolute;
+            width: clamp(200px, 40vw, 400px);
+            height: clamp(200px, 40vw, 400px);
+            border: 2px solid transparent;
+            border-radius: 50%;
+            background: conic-gradient(from 0deg, #00f5ff, #ff00ff, #00ff88, #00f5ff);
+            -webkit-mask: 
+                linear-gradient(#fff 0 0) content-box, 
+                linear-gradient(#fff 0 0);
+            mask: 
+                linear-gradient(#fff 0 0) content-box, 
+                linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            animation: circleSpin 8s linear infinite, circlePulse 3s ease-in-out infinite;
+            opacity: 0.3;
+        }
+        
+        .tech-circle::before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 15px;
+            height: 15px;
+            background: #00f5ff;
+            border-radius: 50%;
+            box-shadow: 0 0 20px #00f5ff, 0 0 40px #00f5ff;
+        }
+        
+        @keyframes circleSpin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        @keyframes circlePulse {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.5; }
+        }
+        
+        /* Loading Bar */
+        .loading-container {
+            width: clamp(200px, 60vw, 400px);
+            margin-top: 3rem;
+        }
+        
+        .loading-bar {
+            width: 100%;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .loading-progress {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, #00f5ff, #ff00ff, #00f5ff);
+            background-size: 200% 100%;
+            border-radius: 10px;
+            animation: loadingProgress 3s ease-in-out forwards;
+        }
+        
+        @keyframes loadingProgress {
+            0% { width: 0%; left: 0; }
+            50% { width: 100%; left: 0; }
+            100% { width: 0%; left: 100%; }
+        }
+        
+        /* Loading Text */
+        .loading-text {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9rem;
+            color: #a0c4e8;
+            margin-top: 1rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+        
+        .loading-text span {
+            animation: blink 1s infinite;
+        }
+        
+        .loading-text span:nth-child(2) { animation-delay: 0.2s; }
+        .loading-text span:nth-child(3) { animation-delay: 0.4s; }
+        
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+
+        /* Enter Site Link */
+        .enter-site-link {
+            margin-top: 1.5rem;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+            color: #00f5ff;
+            text-decoration: none;
+            opacity: 0;
+            transition: all 0.3s ease;
+            animation: fadeInEnterLink 1s ease 3s forwards;
+        }
+
+        .enter-site-link:hover {
+            opacity: 1 !important;
+            text-shadow: 0 0 10px #00f5ff;
+        }
+
+        @keyframes fadeInEnterLink {
+            to { opacity: 0.7; }
+        }
+
+        /* Tech Decorations */
+        .tech-decor {
+            position: fixed;
+            font-size: 1.5rem;
+            color: rgba(0, 245, 255, 0.3);
+            animation: floatTech 6s ease-in-out infinite;
+        }
+        
+        .td-1 { top: 20%; left: 10%; animation-delay: 0s; }
+        .td-2 { top: 30%; right: 15%; animation-delay: -1s; }
+        .td-3 { bottom: 25%; left: 15%; animation-delay: -2s; }
+        .td-4 { bottom: 35%; right: 10%; animation-delay: -3s; }
+        
+        @keyframes floatTech {
+            0%, 100% { transform: translateY(0) rotate(0deg); opacity: 0.3; }
+            50% { transform: translateY(-20px) rotate(10deg); opacity: 0.6; }
+        }
+        
+        /* Binary Rain Effect */
+        .binary-rain {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+            opacity: 0.1;
+        }
+        
+        /* Sound Toggle */
+        .sound-toggle {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 100;
+            background: rgba(0, 245, 255, 0.1);
+            border: 1px solid rgba(0, 245, 255, 0.3);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .sound-toggle:hover {
+            background: rgba(0, 245, 255, 0.2);
+            border-color: #00f5ff;
+            box-shadow: 0 0 20px rgba(0, 245, 255, 0.5);
+        }
+        
+        .sound-toggle i {
+            color: #00f5ff;
+            font-size: 1.2rem;
+        }
+        
+        /* Glitch Effect for Title */
+        .glitch {
+            position: relative;
+            animation: glitch 2s infinite;
+        }
+        
+        @keyframes glitch {
+            0%, 90%, 100% { opacity: 1; transform: translate(0); }
+            92% { opacity: 0.8; transform: translate(-2px, 2px); }
+            94% { opacity: 1; transform: translate(2px, -2px); }
+            96% { opacity: 0.9; transform: translate(-1px, 1px); }
+            98% { opacity: 1; transform: translate(1px, -1px); }
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .loading-container {
+                width: 80vw;
+            }
+            
+            .orb-1 { width: 200px; height: 200px; }
+            .orb-2 { width: 150px; height: 150px; }
+            .orb-3 { width: 100px; height: 100px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Background Effects -->
+    <div class="splash-bg">
+        <div class="grid-effect"></div>
+        <canvas id="particles"></canvas>
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+    
+    <!-- Binary Rain -->
+    <canvas id="binary-rain" class="binary-rain"></canvas>
+    
+    <!-- Tech Decorations -->
+    <div class="tech-decor td-1"><i class="fas fa-code"></i></div>
+    <div class="tech-decor td-2"><i class="fas fa-microchip"></i></div>
+    <div class="tech-decor td-3"><i class="fas fa-robot"></i></div>
+    <div class="tech-decor td-4"><i class="fas fa-brain"></i></div>
+    
+    <!-- Main Container -->
+    <div class="splash-container">
+        <!-- Tech Circle -->
+        <div class="tech-circle"></div>
+        
+        <!-- Initials -->
+        <div class="initials glitch">RPJr</div>
+        
+        <!-- Loading Bar -->
+        <div class="loading-container">
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+            <p class="loading-text">Loading<span>.</span><span>.</span><span>.</span></p>
+            <!-- Fallback link for manual redirect -->
+            <a href="index-en.html" class="enter-site-link" id="enter-site-link">Enter Site →</a>
+        </div>
+    </div>
+    
+    <!-- Sound Toggle -->
+    <div class="sound-toggle" id="sound-toggle" title="Toggle Sound">
+        <i class="fas fa-volume-up" id="sound-icon"></i>
+    </div>
+    
+    <!-- Audio Element -->
+    <audio id="bgm-audio" loop>
+        <!-- You can add a background music URL here -->
+        <!-- <source src="your-music.mp3" type="audio/mpeg"> -->
+    </audio>
+    
+    <script>
+        // ========================================
+        // SPLASH PAGE CONTROLLER
+        // ========================================
+        (function() {
+            'use strict';
+            
+            const CONFIG = {
+                redirectUrl: 'index-en.html',
+                loadingTime: 4000, // 4 seconds
+                particleCount: 80,
+                binaryCharCount: 50
+            };
+            
+            // Sound State
+            let soundEnabled = true;
+            const audio = document.getElementById('bgm-audio');
+            const soundToggle = document.getElementById('sound-toggle');
+            const soundIcon = document.getElementById('sound-icon');
+            
+            // Sound Toggle Handler
+            if (soundToggle) {
+                soundToggle.addEventListener('click', () => {
+                    soundEnabled = !soundEnabled;
+                    if (soundEnabled) {
+                        soundIcon.className = 'fas fa-volume-up';
+                        audio.volume = 0.3;
+                    } else {
+                        soundIcon.className = 'fas fa-volume-mute';
+                        audio.volume = 0;
+                    }
+                });
+            }
+            
+            // ========================================
+            // PARTICLE SYSTEM
+            // ========================================
+            class ParticleSystem {
+                constructor(canvas) {
+                    this.canvas = canvas;
+                    this.ctx = canvas.getContext('2d');
+                    this.particles = [];
+                    this.resize();
+                    this.init();
+                    this.animate();
+                }
+                
+                resize() {
+                    this.canvas.width = window.innerWidth;
+                    this.canvas.height = window.innerHeight;
+                }
+                
+                init() {
+                    for (let i = 0; i < CONFIG.particleCount; i++) {
+                        this.particles.push({
+                            x: Math.random() * this.canvas.width,
+                            y: Math.random() * this.canvas.height,
+                            size: Math.random() * 3 + 1,
+                            speedX: (Math.random() - 0.5) * 2,
+                            speedY: (Math.random() - 0.5) * 2,
+                            opacity: Math.random() * 0.5 + 0.2,
+                            color: Math.random() > 0.5 ? '#00f5ff' : '#ff00ff'
+                        });
+                    }
+                }
+                
+                animate() {
+                    this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+                    
+                    this.particles.forEach((p, index) => {
+                        p.x += p.speedX;
+                        p.y += p.speedY;
+                        
+                        // Bounce off edges
+                        if (p.x < 0 || p.x > this.canvas.width) p.speedX *= -1;
+                        if (p.y < 0 || p.y > this.canvas.height) p.speedY *= -1;
+                        
+                        // Draw particle
+                        this.ctx.beginPath();
+                        this.ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+                        this.ctx.fillStyle = p.color;
+                        this.ctx.globalAlpha = p.opacity;
+                        this.ctx.fill();
+                        
+                        // Draw connections
+                        this.particles.slice(index + 1).forEach(p2 => {
+                            const dx = p.x - p2.x;
+                            const dy = p.y - p2.y;
+                            const distance = Math.sqrt(dx * dx + dy * dy);
+                            
+                            if (distance < 150) {
+                                this.ctx.beginPath();
+                                this.ctx.moveTo(p.x, p.y);
+                                this.ctx.lineTo(p2.x, p2.y);
+                                this.ctx.strokeStyle = p.color;
+                                this.ctx.globalAlpha = 0.1 * (1 - distance / 150);
+                                this.ctx.lineWidth = 0.5;
+                                this.ctx.stroke();
+                            }
+                        });
+                    });
+                    
+                    this.ctx.globalAlpha = 1;
+                    requestAnimationFrame(() => this.animate());
+                }
+            }
+            
+            // ========================================
+            // BINARY RAIN EFFECT
+            // ========================================
+            class BinaryRain {
+                constructor(canvas) {
+                    this.canvas = canvas;
+                    this.ctx = canvas.getContext('2d');
+                    this.columns = [];
+                    this.fontSize = 14;
+                    this.chars = '01';
+                    this.resize();
+                    this.init();
+                    this.animate();
+                }
+                
+                resize() {
+                    this.canvas.width = window.innerWidth;
+                    this.canvas.height = window.innerHeight;
+                    this.columns = Math.floor(this.canvas.width / this.fontSize);
+                }
+                
+                init() {
+                    for (let i = 0; i < this.columns; i++) {
+                        this.columns[i] = Math.random() * -this.canvas.height;
+                    }
+                }
+                
+                animate() {
+                    this.ctx.fillStyle = 'rgba(5, 10, 20, 0.05)';
+                    this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
+                    
+                    this.ctx.fillStyle = '#00f5ff';
+                    this.ctx.font = `${this.fontSize}px monospace`;
+                    
+                    this.columns.forEach((y, index) => {
+                        const text = this.chars[Math.floor(Math.random() * this.chars.length)];
+                        this.ctx.fillStyle = Math.random() > 0.9 ? '#ff00ff' : '#00f5ff';
+                        this.ctx.fillText(text, index * this.fontSize, y);
+                        
+                        this.columns[index] += this.fontSize * (Math.random() * 0.5 + 0.5);
+                        
+                        if (y > this.canvas.height && Math.random() > 0.975) {
+                            this.columns[index] = 0;
+                        }
+                    });
+                    
+                    requestAnimationFrame(() => this.animate());
+                }
+            }
+            
+            // ========================================
+            // INITIALIZATION
+            // ========================================
+            document.addEventListener('DOMContentLoaded', () => {
+                // Initialize particle system
+                const particleCanvas = document.getElementById('particles');
+                new ParticleSystem(particleCanvas);
+                
+                // Initialize binary rain
+                const binaryCanvas = document.getElementById('binary-rain');
+                new BinaryRain(binaryCanvas);
+                
+                // Handle resize
+                window.addEventListener('resize', () => {
+                    particleCanvas.width = window.innerWidth;
+                    particleCanvas.height = window.innerHeight;
+                    binaryCanvas.width = window.innerWidth;
+                    binaryCanvas.height = window.innerHeight;
+                });
+                
+                // Set volume
+                audio.volume = 0.3;
+                
+                // Redirect after loading
+                setTimeout(() => {
+                    // Add exit animation
+                    document.body.style.transition = 'opacity 0.5s ease';
+                    document.body.style.opacity = '0';
+                    
+                    setTimeout(() => {
+                        window.location.href = CONFIG.redirectUrl;
+                    }, 500);
+                }, CONFIG.loadingTime);
+                
+                // Log
+                console.log('🚀 Splash Page Loaded - Redirecting to Main Site...');
+            });
+            
+        })();
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reinaldo Passos Jr | Frontend Developer</title>
+    <meta name="description" content="Portfolio of Reinaldo Passos Jr - Frontend Developer specializing in HTML, CSS and JavaScript. View my projects and contact me.">
+    <meta name="keywords" content="frontend developer, web developer, HTML, CSS, JavaScript, portfolio, Brazil">
+    <meta name="author" content="Reinaldo Passos Jr">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://reinaldopassosjr.github.io/Portfolio/">
+    <meta property="og:title" content="Reinaldo Passos Jr | Frontend Developer">
+    <meta property="og:description" content="Frontend Developer specializing in HTML, CSS and JavaScript. View my projects and contact me.">
+    <meta property="og:image" content="img/og-image.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://reinaldopassosjr.github.io/Portfolio/">
+    <meta property="twitter:title" content="Reinaldo Passos Jr | Frontend Developer">
+    <meta property="twitter:description" content="Frontend Developer specializing in HTML, CSS and JavaScript. View my projects and contact me.">
+    <meta property="twitter:image" content="img/og-image.png">
+    
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#050a14">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+    
+    <!-- Preconnect for faster loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Background Grid -->
+    <div class="grid-overlay"></div>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="index-en.html" class="logo">RPJr</a>
+        
+        <!-- Navigation Container (Mobile) -->
+        <div class="nav-container">
+            <!-- Language Switcher -->
+            <div class="language-switcher">
+                <button id="lang-en" class="lang-btn active" title="English">
+                    <img src="img/flags/uk.png" alt="English">
+                </button>
+                <button id="lang-pt" class="lang-btn" title="Português">
+                    <img src="img/flags/brazil.png" alt="Português">
+                </button>
+            </div>
+            
+            <!-- Mobile Menu Toggle (Hamburger) -->
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        
+        <!-- Navigation Links -->
+        <ul class="nav-links">
+            <!-- Close Button -->
+            <button class="nav-close-btn" id="nav-close-btn" aria-label="Close Menu">
+                <i class="fas fa-times"></i>
+            </button>
+            
+            <li><a href="index-en.html" class="nav-link active" data-i18n="nav_home">Home</a></li>
+            <li><a href="about-en.html" class="nav-link" data-i18n="nav_about">About</a></li>
+            <li><a href="portfolio-en.html" class="nav-link" data-i18n="nav_portfolio">Portfolio</a></li>
+            <li><a href="contact-en.html" class="nav-link" data-i18n="nav_contact">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Mobile Menu Overlay -->
+    <div class="nav-overlay" id="nav-overlay"></div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <p class="hero-subtitle" data-i18n="hero_subtitle">WELCOME TO MY PORTFOLIO</p>
+            <h1 class="hero-title">Reinaldo Passos Jr</h1>
+            <p class="hero-tagline" data-i18n="hero_tagline">Frontend Developer | HTML & CSS Specialist</p>
+            
+            <div class="typing-container">
+                <span class="typing-text" id="typing-text"></span>
+            </div>
+            
+            <div class="hero-buttons">
+                <a href="portfolio-en.html" class="btn" data-i18n="btn_portfolio">View Portfolio</a>
+                <a href="contact-en.html" class="btn btn-secondary" data-i18n="btn_contact">Contact Me</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <p class="footer-text">
+            © 2025 <span>Reinaldo Passos Jr</span> | <span data-i18n="footer_rights">All rights reserved</span>
+        </p>
+        <p class="footer-text" style="margin-top: 0.5rem;">
+            <span data-i18n="footer_made">Made with</span> <i class="fas fa-heart" style="color: var(--neon-magenta);"></i> and
+            <i class="fas fa-code" style="color: var(--neon-cyan);"></i>
+        </p>
+        <div class="social-links" style="margin-top: 1.5rem;">
+            <a href="mailto:reinaldo.passos@gmail.com" class="social-link" title="Email">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/rpassosjr86" target="_blank" class="social-link" title="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/reinaldopassosjr" target="_blank" class="social-link" title="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/translations.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
+

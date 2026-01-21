@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre | Reinaldo Passos Jr</title>
+    <meta name="description" content="Saiba mais sobre Reinaldo Passos Jr - Desenvolvedor Frontend especializado em HTML, CSS e JavaScript.">
+    <meta name="keywords" content="sobre, desenvolvedor frontend, sobre mim, web developer, HTML, CSS, JavaScript, portfolio">
+    <meta name="author" content="Reinaldo Passos Jr">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://reinaldopassosjr.github.io/Portfolio/about-pt.html">
+    <meta property="og:title" content="Sobre | Reinaldo Passos Jr">
+    <meta property="og:description" content="Saiba mais sobre Reinaldo Passos Jr - Desenvolvedor Frontend">
+    <meta property="og:image" content="img/og-image.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://reinaldopassosjr.github.io/Portfolio/about-pt.html">
+    <meta property="twitter:title" content="Sobre | Reinaldo Passos Jr">
+    <meta property="twitter:description" content="Saiba mais sobre Reinaldo Passos Jr - Desenvolvedor Frontend">
+    <meta property="twitter:image" content="img/og-image.png">
+    
+    <meta name="theme-color" content="#050a14">
+    
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Background Effects -->
+    <div class="grid-overlay"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="index-pt.html" class="logo">RPJr</a>
+        
+        <!-- Navigation Container (Mobile) -->
+        <div class="nav-container">
+            <!-- Language Switcher -->
+            <div class="language-switcher">
+                <button id="lang-en" class="lang-btn" title="English">
+                    <img src="img/flags/uk.png" alt="English">
+                </button>
+                <button id="lang-pt" class="lang-btn active" title="Português">
+                    <img src="img/flags/brazil.png" alt="Português">
+                </button>
+            </div>
+            
+            <!-- Mobile Menu Toggle (Hamburger) -->
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        
+        <!-- Navigation Links -->
+        <ul class="nav-links">
+            <!-- Close Button -->
+            <button class="nav-close-btn" id="nav-close-btn" aria-label="Close Menu">
+                <i class="fas fa-times"></i>
+            </button>
+            
+            <li><a href="index-pt.html" class="nav-link" data-i18n="nav_home">Home</a></li>
+            <li><a href="about-pt.html" class="nav-link active" data-i18n="nav_about">Sobre</a></li>
+            <li><a href="portfolio-pt.html" class="nav-link" data-i18n="nav_portfolio">Portfolio</a></li>
+            <li><a href="contact-pt.html" class="nav-link" data-i18n="nav_contact">Contato</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Mobile Menu Overlay -->
+    <div class="nav-overlay" id="nav-overlay"></div>
+
+    <!-- About Hero -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-i18n="about_title">Sobre Mim</h2>
+                <p data-i18n="about_subtitle">Quem está por trás do código</p>
+            </div>
+
+            <div class="about-hero animate-on-scroll">
+                <!-- Profile Image -->
+                <div class="profile-container">
+                    <img src="img/photo.png" alt="Reinaldo Passos Jr" class="profile-image">
+                    <div class="profile-border"></div>
+                </div>
+
+                <!-- About Content -->
+                <div class="about-content">
+                    <h3 data-i18n="about_fullname">Reinaldo Assis dos Passos Junior</h3>
+                    <p class="hero-tagline" data-i18n="about_role">Frontend Developer & Tech Enthusiast</p>
+
+                    <p style="margin-bottom: 1.5rem;" data-i18n="about_bio1_pt">
+                        Olá! Meu nome é <strong style="color: var(--neon-cyan);">Reinaldo Passos Jr</strong>,
+                        e sou um desenvolvedor frontend apaixonado por tecnologia e design.
+                        Especializado em <strong>HTML</strong> e <strong>CSS</strong>,
+                        estou constantemente expandindo meus conhecimentos em
+                        <strong>JavaScript</strong> e explorando as possibilidades que
+                        as ferramentas de <strong>Inteligência Artificial</strong> oferecem para otimização do desenvolvimento.
+                    </p>
+
+                    <p style="margin-bottom: 2rem;" data-i18n="about_bio2_pt">
+                        Meu objetivo é criar experiências digitais únicas e funcionais,
+                        combinando código limpo com design intuitivo. Cada projeto é uma
+                        oportunidade de aprender algo novo e superar desafios técnicos.
+                    </p>
+
+                    <p data-i18n="about_future_pt">
+                        <strong style="color: var(--neon-magenta);">Próximos passos:</strong>
+                        Em breve, pretendo dominar linguagens para desenvolvimento de
+                        aplicativos mobile, expandindo ainda mais minhas habilidades no mundo da tecnologia.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Skills Section -->
+            <div style="margin-top: 4rem;">
+                <div class="section-header">
+                    <h2 data-i18n="skills_title">Minhas Skills</h2>
+                    <p data-i18n="skills_subtitle">Tecnologias que domino</p>
+                </div>
+
+                <div class="skills-grid">
+                    <!-- HTML Skill -->
+                    <div class="card skill-card animate-on-scroll">
+                        <div class="skill-icon">
+                            <i class="fab fa-html5" style="color: #e34c26; font-size: 4rem;"></i>
+                        </div>
+                        <h3 class="skill-name" data-i18n="skill_html">HTML5</h3>
+                        <p data-i18n="skill_html_desc_pt">Estruturação semântica, acessibilidade, SEO</p>
+                        <div class="skill-level">
+                            <div class="skill-progress" style="width: 95%;"></div>
+                        </div>
+                        <span style="color: var(--neon-cyan); font-size: 0.9rem; margin-top: 0.5rem; display: block;">95%</span>
+                    </div>
+
+                    <!-- CSS Skill -->
+                    <div class="card skill-card animate-on-scroll">
+                        <div class="skill-icon">
+                            <i class="fab fa-css3-alt" style="color: #264de4; font-size: 4rem;"></i>
+                        </div>
+                        <h3 class="skill-name" data-i18n="skill_css">CSS3</h3>
+                        <p data-i18n="skill_css_desc_pt">Design responsivo, animações, flexbox, grid</p>
+                        <div class="skill-level">
+                            <div class="skill-progress" style="width: 90%;"></div>
+                        </div>
+                        <span style="color: var(--neon-cyan); font-size: 0.9rem; margin-top: 0.5rem; display: block;">90%</span>
+                    </div>
+
+                    <!-- JavaScript Skill -->
+                    <div class="card skill-card animate-on-scroll">
+                        <div class="skill-icon">
+                            <i class="fab fa-js" style="color: #f7df1e; font-size: 4rem;"></i>
+                        </div>
+                        <h3 class="skill-name" data-i18n="skill_js">JavaScript</h3>
+                        <p data-i18n="skill_js_desc_pt">Manipulação DOM, eventos, lógica de programação</p>
+                        <div class="skill-level">
+                            <div class="skill-progress" style="width: 60%;"></div>
+                        </div>
+                        <span style="color: var(--neon-cyan); font-size: 0.9rem; margin-top: 0.5rem; display: block;">60%</span>
+                    </div>
+
+                    <!-- AI Tools -->
+                    <div class="card skill-card animate-on-scroll">
+                        <div class="skill-icon">
+                            <i class="fas fa-brain" style="color: #00f3ff; font-size: 4rem;"></i>
+                        </div>
+                        <h3 class="skill-name" data-i18n="skill_ai">AI Tools</h3>
+                        <p data-i18n="skill_ai_desc_pt">ChatGPT, Claude, GitHub Copilot e mais</p>
+                        <div class="skill-level">
+                            <div class="skill-progress" style="width: 75%;"></div>
+                        </div>
+                        <span style="color: var(--neon-cyan); font-size: 0.9rem; margin-top: 0.5rem; display: block;">75%</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Journey Section -->
+            <div style="margin-top: 4rem;">
+                <div class="section-header">
+                    <h2 data-i18n="journey_title">Minha Jornada</h2>
+                    <p data-i18n="journey_subtitle">O caminho até aqui</p>
+                </div>
+
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <div class="card animate-on-scroll" style="margin-bottom: 1.5rem; border-left: 3px solid var(--neon-cyan);">
+                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                            <i class="fas fa-code" style="color: var(--neon-cyan); font-size: 1.5rem;"></i>
+                            <h3 style="margin: 0;" data-i18n="journey_1_title">Início na Programação</h3>
+                        </div>
+                        <p style="margin: 0;" data-i18n="journey_1_desc_pt">
+                            Comecei minha jornada no desenvolvimento web com foco em Frontend,
+                            dominando HTML e CSS para criar interfaces modernas e responsivas.
+                        </p>
+                    </div>
+
+                    <div class="card animate-on-scroll" style="margin-bottom: 1.5rem; border-left: 3px solid var(--neon-magenta);">
+                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                            <i class="fas fa-rocket" style="color: var(--neon-magenta); font-size: 1.5rem;"></i>
+                            <h3 style="margin: 0;" data-i18n="journey_2_title">Expansão com JavaScript</h3>
+                        </div>
+                        <p style="margin: 0;" data-i18n="journey_2_desc_pt">
+                            Atualmente estou aprendendo JavaScript para adicionar interatividade
+                            e dinamismo aos meus projetos, criando experiências únicas para os usuários.
+                        </p>
+                    </div>
+
+                    <div class="card animate-on-scroll" style="margin-bottom: 1.5rem; border-left: 3px solid var(--neon-green);">
+                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                            <i class="fas fa-mobile-alt" style="color: var(--neon-green); font-size: 1.5rem;"></i>
+                            <h3 style="margin: 0;" data-i18n="journey_3_title">Futuro: Mobile Development</h3>
+                        </div>
+                        <p style="margin: 0;" data-i18n="journey_3_desc_pt">
+                            Planejo aprender desenvolvimento de aplicativos mobile em breve,
+                            expandindo meu repertório técnico para criar soluções completas.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section">
+        <div class="container">
+            <div class="card animate-on-scroll" style="text-align: center; padding: 4rem 2rem;">
+                <h2 style="margin-bottom: 1rem;" data-i18n="cta_about_title">Gostou de Me Conhecer?</h2>
+                <p style="margin-bottom: 2rem; max-width: 500px; margin-left: auto; margin-right: auto;" data-i18n="cta_about_desc_pt">
+                    Veja meus projetos e let's build something amazing together!
+                </p>
+                <a href="portfolio-pt.html" class="btn" data-i18n="btn_portfolio_alt">
+                    <i class="fas fa-briefcase"></i> Ver Portfolio
+                </a>
+                <a href="contact-pt.html" class="btn btn-secondary" data-i18n="btn_contact_alt">
+                    <i class="fas fa-envelope"></i> Contato
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p class="footer-text">
+            © 2025 <span>Reinaldo Passos Jr</span> | <span data-i18n="footer_rights">Todos os direitos reservados</span>
+        </p>
+        <p class="footer-text" style="margin-top: 0.5rem;">
+            <span data-i18n="footer_made">Feito com</span> <i class="fas fa-heart" style="color: var(--neon-magenta);"></i> and
+            <i class="fas fa-code" style="color: var(--neon-cyan);"></i>
+        </p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/translations.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
+

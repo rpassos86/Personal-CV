@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Reinaldo Passos Jr</title>
+    <meta name="description" content="Portfolio of projects by Reinaldo Passos Jr - Frontend Developer. View my web development projects and works.">
+    <meta name="keywords" content="portfolio, frontend developer, projects, web development, HTML, CSS, JavaScript">
+    <meta name="author" content="Reinaldo Passos Jr">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://reinaldopassosjr.github.io/Portfolio/portfolio-en.html">
+    <meta property="og:title" content="Portfolio | Reinaldo Passos Jr">
+    <meta property="og:description" content="View my web development projects and works">
+    <meta property="og:image" content="img/og-image.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://reinaldopassosjr.github.io/Portfolio/portfolio-en.html">
+    <meta property="twitter:title" content="Portfolio | Reinaldo Passos Jr">
+    <meta property="twitter:description" content="View my web development projects and works">
+    <meta property="twitter:image" content="img/og-image.png">
+    
+    <meta name="theme-color" content="#050a14">
+    
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Background Effects -->
+    <div class="grid-overlay"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="index-en.html" class="logo">RPJr</a>
+        
+        <!-- Navigation Container (Mobile) -->
+        <div class="nav-container">
+            <!-- Language Switcher -->
+            <div class="language-switcher">
+                <button id="lang-en" class="lang-btn active" title="English">
+                    <img src="img/flags/uk.png" alt="English">
+                </button>
+                <button id="lang-pt" class="lang-btn" title="Português">
+                    <img src="img/flags/brazil.png" alt="Português">
+                </button>
+            </div>
+            
+            <!-- Mobile Menu Toggle (Hamburger) -->
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        
+        <!-- Navigation Links -->
+        <ul class="nav-links">
+            <!-- Close Button -->
+            <button class="nav-close-btn" id="nav-close-btn" aria-label="Close Menu">
+                <i class="fas fa-times"></i>
+            </button>
+            
+            <li><a href="index-en.html" class="nav-link" data-i18n="nav_home">Home</a></li>
+            <li><a href="about-en.html" class="nav-link" data-i18n="nav_about">About</a></li>
+            <li><a href="portfolio-en.html" class="nav-link active" data-i18n="nav_portfolio">Portfolio</a></li>
+            <li><a href="contact-en.html" class="nav-link" data-i18n="nav_contact">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Mobile Menu Overlay -->
+    <div class="nav-overlay" id="nav-overlay"></div>
+
+    <!-- Portfolio Section -->
+    <section class="section" id="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-i18n="portfolio_title">My Portfolio</h2>
+                <p data-i18n="portfolio_subtitle">Projects I developed with dedication</p>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="filter-buttons" style="display: flex; justify-content: center; gap: 1rem; margin-bottom: 3rem; flex-wrap: wrap;">
+                <button class="btn filter-btn active" data-filter="all" style="padding: 10px 25px; font-size: 0.9rem;" data-i18n="filter_all">
+                    <i class="fas fa-th"></i> All
+                </button>
+                <button class="btn filter-btn" data-filter="web" style="padding: 10px 25px; font-size: 0.9rem;" data-i18n="filter_web">
+                    <i class="fas fa-globe"></i> Web
+                </button>
+                <button class="btn filter-btn" data-filter="app" style="padding: 10px 25px; font-size: 0.9rem;" data-i18n="filter_app">
+                    <i class="fas fa-mobile-alt"></i> Apps
+                </button>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="portfolio-grid">
+
+                <!-- Project 1: Delícias da Sil -->
+                <div class="project-card card animate-on-scroll" data-category="web" data-project="delicias">
+                    <div class="project-image-container" style="position: relative; overflow: hidden; border-radius: 10px;">
+                        <img src="img/deliciasdasil.png"
+                             alt="Delícias da Sil"
+                             class="project-image"
+                             style="width: 100%; height: 250px; object-fit: cover;"
+                             loading="lazy">
+                        <div class="project-overlay">
+                            <a href="https://deliciasdasil.free.nf" target="_blank" class="project-link" data-i18n="btn_visit">
+                                <i class="fas fa-external-link-alt"></i> Visit Site
+                            </a>
+                        </div>
+                    </div>
+                    <div style="padding: 1rem 0;">
+                        <h3 class="project-title" data-i18n="project_delicias">🍰 Delícias da Sil</h3>
+                        <p class="project-description" data-i18n="project_delicias_desc">
+                            Complete website for a confectionery with product catalog,
+                            elegant design and functionalities to facilitate online orders.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">HTML5</span>
+                            <span class="tag">CSS3</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">Responsive</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Calculator (Coming Soon) -->
+                <div class="project-card card animate-on-scroll" data-category="app" data-project="calculator">
+                    <div class="project-image-container" style="position: relative; overflow: hidden; border-radius: 10px;">
+                        <img src="https://images.unsplash.com/photo-1587145820266-a5951ee1f620?w=600&h=400&fit=crop"
+                             alt="Calculator"
+                             class="project-image"
+                             style="width: 100%; height: 250px; object-fit: cover;"
+                             loading="lazy">
+                        <div class="project-overlay">
+                            <span style="color: var(--neon-yellow); font-size: 0.9rem; margin-bottom: 1rem;" data-i18n="project_calc_soon">
+                                <i class="fas fa-clock"></i> Coming Soon
+                            </span>
+                        </div>
+                    </div>
+                    <div style="padding: 1rem 0;">
+                        <h3 class="project-title" data-i18n="project_calc">🧮 Calculator Pro</h3>
+                        <p class="project-description" data-i18n="project_calc_desc">
+                            A modern and functional calculator with intuitive interface
+                            and tech design. Developed with HTML, CSS and JavaScript.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">HTML5</span>
+                            <span class="tag">CSS3</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">UI/UX</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: This Portfolio -->
+                <div class="project-card card animate-on-scroll" data-category="web" data-project="portfolio">
+                    <div class="project-image-container" style="position: relative; overflow: hidden; border-radius: 10px;">
+                        <img src="img/rpjr.png"
+                             alt="My Tech Portfolio"
+                             class="project-image"
+                             style="width: 100%; height: 250px; object-fit: cover;"
+                             loading="lazy">
+                        <div class="project-overlay">
+                            <span style="color: var(--neon-green); font-size: 0.9rem; margin-bottom: 1rem;" data-i18n="project_portfolio_current">
+                                <i class="fas fa-check-circle"></i> Current
+                            </span>
+                        </div>
+                    </div>
+                    <div style="padding: 1rem 0;">
+                        <h3 class="project-title" data-i18n="project_portfolio_title">💼 My Tech Portfolio</h3>
+                        <p class="project-description" data-i18n="project_portfolio_desc">
+                            This personal website with ultra-technological design,
+                            CSS and JavaScript animations, particles effects and glassmorphism.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">HTML5</span>
+                            <span class="tag">CSS3</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">Cyberpunk</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="section" style="background: var(--bg-secondary);">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-i18n="stats_title">Statistics</h2>
+                <p data-i18n="stats_subtitle">Journey summary</p>
+            </div>
+
+            <div class="skills-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+                <div class="card skill-card animate-on-scroll" style="text-align: center;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">
+                        <i class="fas fa-project-diagram" style="color: var(--neon-cyan);"></i>
+                    </div>
+                    <h3 style="font-size: 2.5rem; margin-bottom: 0.5rem;">3+</h3>
+                    <p style="margin: 0;" data-i18n="stats_projects">Projects Completed</p>
+                </div>
+
+                <div class="card skill-card animate-on-scroll" style="text-align: center;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">
+                        <i class="fas fa-code" style="color: var(--neon-magenta);"></i>
+                    </div>
+                    <h3 style="font-size: 2.5rem; margin-bottom: 0.5rem;">10K+</h3>
+                    <p style="margin: 0;" data-i18n="stats_lines">Lines of Code</p>
+                </div>
+
+                <div class="card skill-card animate-on-scroll" style="text-align: center;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">
+                        <i class="fas fa-coffee" style="color: var(--neon-green);"></i>
+                    </div>
+                    <h3 style="font-size: 2.5rem; margin-bottom: 0.5rem;">∞</h3>
+                    <p style="margin: 0;" data-i18n="stats_coffee">Cups of Coffee</p>
+                </div>
+
+                <div class="card skill-card animate-on-scroll" style="text-align: center;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">
+                        <i class="fas fa-brain" style="color: var(--neon-yellow);"></i>
+                    </div>
+                    <h3 style="font-size: 2.5rem; margin-bottom: 0.5rem;">4</h3>
+                    <p style="margin: 0;" data-i18n="stats_tech">Technologies Mastered</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section">
+        <div class="container">
+            <div class="card animate-on-scroll" style="text-align: center; padding: 4rem 2rem;">
+                <h2 style="margin-bottom: 1rem;" data-i18n="cta_portfolio_title">Have a Project in Mind?</h2>
+                <p style="margin-bottom: 2rem; max-width: 500px; margin-left: auto; margin-right: auto;" data-i18n="cta_portfolio_desc">
+                    Contact me and let's build something amazing together!
+                </p>
+                <a href="contact-en.html" class="btn" data-i18n="btn_contact">
+                    <i class="fas fa-paper-plane"></i> Contact Me
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p class="footer-text">
+            © 2025 <span>Reinaldo Passos Jr</span> | <span data-i18n="footer_rights">All rights reserved</span>
+        </p>
+        <p class="footer-text" style="margin-top: 0.5rem;">
+            <span data-i18n="footer_made">Made with</span> <i class="fas fa-heart" style="color: var(--neon-magenta);"></i> and
+            <i class="fas fa-code" style="color: var(--neon-cyan);"></i>
+        </p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/translations.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

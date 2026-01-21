@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato | Reinaldo Passos Jr</title>
+    <meta name="description" content="Entre em contato com Reinaldo Passos Jr - Desenvolvedor Frontend. Disponível para projetos freelance e colaborações.">
+    <meta name="keywords" content="contato, desenvolvedor frontend, email, linkedin, github, freelance">
+    <meta name="author" content="Reinaldo Passos Jr">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://reinaldopassosjr.github.io/Portfolio/contact-pt.html">
+    <meta property="og:title" content="Contato | Reinaldo Passos Jr">
+    <meta property="og:description" content="Entre em contato com Reinaldo Passos Jr para seu próximo projeto">
+    <meta property="og:image" content="img/og-image.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://reinaldopassosjr.github.io/Portfolio/contact-pt.html">
+    <meta property="twitter:title" content="Contato | Reinaldo Passos Jr">
+    <meta property="twitter:description" content="Entre em contato com Reinaldo Passos Jr para seu próximo projeto">
+    <meta property="twitter:image" content="img/og-image.png">
+    
+    <meta name="theme-color" content="#050a14">
+    
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Background Effects -->
+    <div class="grid-overlay"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="index-pt.html" class="logo">RPJr</a>
+        
+        <!-- Navigation Container (Mobile) -->
+        <div class="nav-container">
+            <!-- Language Switcher -->
+            <div class="language-switcher">
+                <button id="lang-en" class="lang-btn" title="English">
+                    <img src="img/flags/uk.png" alt="English">
+                </button>
+                <button id="lang-pt" class="lang-btn active" title="Português">
+                    <img src="img/flags/brazil.png" alt="Português">
+                </button>
+            </div>
+            
+            <!-- Mobile Menu Toggle (Hamburger) -->
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        
+        <!-- Navigation Links -->
+        <ul class="nav-links">
+            <!-- Close Button -->
+            <button class="nav-close-btn" id="nav-close-btn" aria-label="Close Menu">
+                <i class="fas fa-times"></i>
+            </button>
+            
+            <li><a href="index-pt.html" class="nav-link" data-i18n="nav_home">Home</a></li>
+            <li><a href="about-pt.html" class="nav-link" data-i18n="nav_about">Sobre</a></li>
+            <li><a href="portfolio-pt.html" class="nav-link" data-i18n="nav_portfolio">Portfolio</a></li>
+            <li><a href="contact-pt.html" class="nav-link active" data-i18n="nav_contact">Contato</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Mobile Menu Overlay -->
+    <div class="nav-overlay" id="nav-overlay"></div>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-i18n="contact_title">Entre em Contato</h2>
+                <p data-i18n="contact_subtitle">Vamos conversar sobre seu próximo projeto</p>
+            </div>
+
+            <div class="contact-container">
+                <!-- Contact Info Cards -->
+                <div class="contact-grid animate-on-scroll">
+
+                    <!-- Email -->
+                    <div class="card contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope" style="color: #00f3ff;"></i>
+                        </div>
+                        <p class="contact-label" data-i18n="contact_email">E-mail</p>
+                        <a href="mailto:reinaldo.passos@gmail.com" class="contact-value">
+                            reinaldo.passos@gmail.com
+                        </a>
+                    </div>
+
+                    <!-- LinkedIn -->
+                    <div class="card contact-card">
+                        <div class="contact-icon">
+                            <i class="fab fa-linkedin" style="color: #0077b5;"></i>
+                        </div>
+                        <p class="contact-label" data-i18n="contact_linkedin">LinkedIn</p>
+                        <a href="https://www.linkedin.com/in/rpassosjr86" target="_blank" class="contact-value">
+                            /in/rpassosjr86
+                        </a>
+                    </div>
+
+                    <!-- GitHub -->
+                    <div class="card contact-card">
+                        <div class="contact-icon">
+                            <i class="fab fa-github" style="color: #fff;"></i>
+                        </div>
+                        <p class="contact-label" data-i18n="contact_github">GitHub</p>
+                        <a href="https://github.com/reinaldopassosjr" target="_blank" class="contact-value">
+                            reinaldopassosjr
+                        </a>
+                    </div>
+
+                </div>
+
+                <!-- Social Links - REMOVIDO por solicitação -->
+                <!-- Mantidos apenas os 3 cartões principais acima -->
+
+                <!-- Contact Form - FUNCIONAL com FormSubmit.co -->
+                <div class="card animate-on-scroll" style="margin-top: 3rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                    <h3 style="text-align: center; margin-bottom: 2rem;" data-i18n="contact_form_title">
+                        <i class="fas fa-paper-plane" style="color: var(--neon-cyan);"></i> Envie uma Mensagem
+                    </h3>
+
+                    <form id="contact-form" action="https://formsubmit.co/reinaldo.passos@gmail.com" method="POST" style="display: flex; flex-direction: column; gap: 1.5rem;">
+                        <!-- Campos ocultos do FormSubmit -->
+                        <input type="hidden" name="_subject" value="Novo contato do Portfolio">
+                        <input type="hidden" name="_next" value="https://reinaldopassosjr.github.io/Portfolio/contact-pt.html?success=true">
+                        <input type="hidden" name="_captcha" value="false">
+                        
+                        <div class="contact-form-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                            <div class="form-group">
+                                <label style="display: block; margin-bottom: 0.5rem; color: var(--text-secondary); font-size: 0.9rem;" data-i18n="form_name">
+                                    <i class="fas fa-user" style="color: var(--neon-cyan);"></i> Nome
+                                </label>
+                                <input type="text" id="form-name" name="nome" required
+                                       placeholder="Seu nome"
+                                       style="width: 100%; padding: 12px 15px; background: rgba(255,255,255,0.05); border: 1px solid var(--glass-border); border-radius: 8px; color: var(--text-primary); font-family: 'Rajdhani', sans-serif; font-size: 1rem; transition: var(--transition-normal);"
+                                       onfocus="this.style.borderColor='var(--neon-cyan)'; this.style.boxShadow='0 0 10px rgba(0,243,255,0.3)';"
+                                       onblur="this.style.borderColor='var(--glass-border)'; this.style.boxShadow='none';">
+                            </div>
+
+                            <div class="form-group">
+                                <label style="display: block; margin-bottom: 0.5rem; color: var(--text-secondary); font-size: 0.9rem;" data-i18n="form_email">
+                                    <i class="fas fa-envelope" style="color: var(--neon-cyan);"></i> E-mail
+                                </label>
+                                <input type="email" id="form-email" name="email" required
+                                       placeholder="seu@email.com"
+                                       style="width: 100%; padding: 12px 15px; background: rgba(255,255,255,0.05); border: 1px solid var(--glass-border); border-radius: 8px; color: var(--text-primary); font-family: 'Rajdhani', sans-serif; font-size: 1rem; transition: var(--transition-normal);"
+                                       onfocus="this.style.borderColor='var(--neon-cyan)'; this.style.boxShadow='0 0 10px rgba(0,243,255,0.3)';"
+                                       onblur="this.style.borderColor='var(--glass-border)'; this.style.boxShadow='none';">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label style="display: block; margin-bottom: 0.5rem; color: var(--text-secondary); font-size: 0.9rem;" data-i18n="form_subject">
+                                <i class="fas fa-tag" style="color: var(--neon-cyan);"></i> Assunto
+                            </label>
+                            <input type="text" id="form-subject" name="assunto" required
+                                   placeholder="Assunto da mensagem"
+                                   style="width: 100%; padding: 12px 15px; background: rgba(255,255,255,0.05); border: 1px solid var(--glass-border); border-radius: 8px; color: var(--text-primary); font-family: 'Rajdhani', sans-serif; font-size: 1rem; transition: var(--transition-normal);"
+                                   onfocus="this.style.borderColor='var(--neon-cyan)'; this.style.boxShadow='0 0 10px rgba(0,243,255,0.3)';"
+                                   onblur="this.style.borderColor='var(--glass-border)'; this.style.boxShadow='none';">
+                        </div>
+
+                        <div class="form-group">
+                            <label style="display: block; margin-bottom: 0.5rem; color: var(--text-secondary); font-size: 0.9rem;" data-i18n="form_message">
+                                <i class="fas fa-comment" style="color: var(--neon-cyan);"></i> Mensagem
+                            </label>
+                            <textarea id="form-message" name="mensagem" rows="5" required
+                                      placeholder="Sua mensagem..."
+                                      style="width: 100%; padding: 12px 15px; background: rgba(255,255,255,0.05); border: 1px solid var(--glass-border); border-radius: 8px; color: var(--text-primary); font-family: 'Rajdhani', sans-serif; font-size: 1rem; resize: vertical; transition: var(--transition-normal);"
+                                      onfocus="this.style.borderColor='var(--neon-cyan)'; this.style.boxShadow='0 0 10px rgba(0,243,255,0.3)';"
+                                      onblur="this.style.borderColor='var(--glass-border)'; this.style.boxShadow='none';"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn" style="align-self: center; margin-top: 1rem;" data-i18n="form_btn">
+                            <i class="fas fa-paper-plane"></i> Enviar Mensagem
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Availability Status -->
+    <section class="section" style="padding-top: 0;">
+        <div class="container">
+            <div class="card animate-on-scroll" style="text-align: center; padding: 2rem;">
+                <div style="display: flex; align-items: center; justify-content: center; gap: 1rem; margin-bottom: 1rem;">
+                    <div style="width: 12px; height: 12px; background: var(--neon-green); border-radius: 50%; animation: pulse 2s infinite;"></div>
+                    <h3 style="margin: 0; color: var(--neon-green);" data-i18n="available_title">Disponível para projetos</h3>
+                </div>
+                <p style="margin: 0; color: var(--text-secondary);" data-i18n="available_desc_pt">
+                    Atualmente aceitando novos projetos freelance e oportunidades de colaboração.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p class="footer-text">
+            © 2025 <span>Reinaldo Passos Jr</span> | <span data-i18n="footer_rights">Todos os direitos reservados</span>
+        </p>
+        <p class="footer-text" style="margin-top: 0.5rem;">
+            <span data-i18n="footer_made">Feito com</span> <i class="fas fa-heart" style="color: var(--neon-magenta);"></i> and
+            <i class="fas fa-code" style="color: var(--neon-cyan);"></i>
+        </p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/translations.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
+

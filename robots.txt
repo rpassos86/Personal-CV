@@ -1,0 +1,20 @@
+# Robots.txt for Personal CV Portfolio
+# Reinaldo Passos Jr
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://reinaldopassosjr.github.io/Portfolio/sitemap.xml
+
+# Crawl-delay (optional)
+Crawl-delay: 10
+
+# Disallow admin/private directories (if any)
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /private/
+
+# Host
+Host: https://reinaldopassosjr.github.io/Portfolio/
+
