@@ -74,7 +74,7 @@ const translations = {
         'journey_1_title': 'Start of Programming',
         'journey_1_desc': 'Started my journey in web development with focus on Frontend, mastering HTML and CSS to create.',
         
-        'journey_2 modern and responsive interfaces_title': 'Expansion with JavaScript',
+        'journey_2_title': 'Expansion with JavaScript',
         'journey_2_desc': 'Currently learning JavaScript to add interactivity and dynamism to my projects, creating unique experiences for users.',
         
         'journey_3_title': 'Future: Mobile Development',
@@ -155,19 +155,8 @@ const translations = {
         'nav_contact': 'Contato',
         
         // Hero Section (Index)
-        'hero_welcome': '/// BEM-VINDO AO MEU UNIVERSO DIGITAL',
-        'hero_title': 'Reinaldo Passos Jr',
-        'hero_subtitle': 'BEM-VINDO AO MEU PORTFOLIO',
+        'hero_subtitle': 'DESENVOLVEDOR FRONTEND | ESPECIALISTA EM HTML & CSS',
         'hero_tagline': 'Desenvolvedor Frontend | HTML & CSS Specialist',
-        'hero_typing': ['Desenvolvedor Frontend', 'Especialista em HTML & CSS', 'Aprendendo JavaScript', 'Entusiasta de Tech'],
-        'btn_portfolio': 'Ver Portfolio',
-        'btn_about': 'Sobre Mim',
-        'btn_contact': 'Contato',
-        'btn_view_project': 'Ver Projeto',
-        'btn_coming_soon': 'Em Breve',
-        'tag_in_progress': 'Em Andamento',
-        'btn_connect': 'Conectar',
-        'btn_view_repos': 'Ver Repositórios',
         
         // Preview Section
         'preview_title': 'O Que Eu Faço',
@@ -187,7 +176,7 @@ const translations = {
         'featured_title': 'Projeto em Destaque',
         'featured_subtitle': 'Um dos meus principais trabalhos',
         'delicias_title': '🍰 Delícias da Sil',
-        'delicias_desc': 'Um site completo para uma confeitaria, desenvolvido com HTML, CSS e JavaScript. Design elegante e funcional para apresentar produtos e facilitar pedidos.',
+        'delicias_desc': 'Site completo para confeitaria com catálogo de produtos, design elegante e funcionalidades para facilitar pedidos online.',
         'delicias_tags': ['HTML5', 'CSS3', 'JavaScript', 'Responsivo'],
         'btn_visit': '<i class="fas fa-external-link-alt"></i> Visitar Site',
         
@@ -290,7 +279,6 @@ const translations = {
 
         'available_title': 'Disponível para projetos',
         'available_desc': 'Atualmente aceitando novos projetos freelance e oportunidades de colaboração.',
-        'available_desc_pt': 'Atualmente aceitando novos projetos freelance e oportunidades de colaboração.',
 
         // Footer
         'footer_rights': 'Todos os direitos reservados',
@@ -301,39 +289,10 @@ const translations = {
         'modal_technologies': 'Tecnologias',
         'modal_features': 'Principais Recursos',
         'btn_github': 'Ver Código',
-
-        // Alternative PT descriptions (without HTML tags for specific pages)
-        'about_title': 'O Que Eu Faço',
-        'about_subtitle': 'Transformando ideias em realidade digital',
-        'skill_html_desc_pt': 'Estrutura semântica e acessível para websites modernos',
-        'skill_css_desc_pt': 'Design responsivo, animações e efeitos visuais avançados',
-        'skill_js_desc_pt': 'Interatividade e dinamismo para aplicações web',
-        'skill_ai_desc_pt': 'Utilização de ferramentas de IA para otimização',
-        'about_bio1_pt': `Olá! Meu nome é Reinaldo Passos Jr,
-            e sou um desenvolvedor frontend apaixonado por tecnologia e design.
-            Especializado em HTML e CSS,
-            estou constantemente expandindo meus conhecimentos em
-            JavaScript e explorando as possibilidades que
-            as ferramentas de Inteligência Artificial oferecem para otimização do desenvolvimento.`,
-        'about_bio2_pt': `Meu objetivo é criar experiências digitais únicas e funcionais,
-            combinando código limpo com design intuitivo. Cada projeto é uma
-            oportunidade de aprender algo novo e superar desafios técnicos.`,
-        'about_future_pt': `Próximos passos:
-            Em breve, pretendo dominar linguagens para desenvolvimento de
-            aplicativos mobile, expandindo ainda mais minhas habilidades no mundo da tecnologia.`,
-        'journey_1_desc_pt': 'Comecei minha jornada no desenvolvimento web com foco em Frontend, dominando HTML e CSS para criar interfaces modernas e responsivas.',
-        'journey_2_desc_pt': 'Atualmente estou aprendendo JavaScript para adicionar interatividade e dinamismo aos meus projetos, criando experiências únicas para os usuários.',
-        'journey_3_desc_pt': 'Planejo aprender desenvolvimento de aplicativos mobile em breve, expandindo meu repertório técnico para criar soluções completas.',
-        'cta_about_desc_pt': 'Veja meus projetos e lets build something amazing together!',
-        'project_delicias_desc_pt': 'Website completo para uma confeitaria com catálogo de produtos, design elegante e funcionalidades para facilitar pedidos online.',
-        'project_calc_desc_pt': 'Uma calculadora moderna e funcional com interface intuitiva e design tech. Desenvolvida com HTML, CSS e JavaScript.',
-        'project_portfolio_desc_pt': 'Este site pessoal com design ultra-tecnológico, animações CSS e JavaScript, particles effects e glassmorphism.',
-        'project_new_desc_pt': 'Novos projetos estão sendo desenvolvidos. Fique atento para mais atualizações em breve!',
-        'cta_portfolio_desc_pt': 'Entre em contato e lets build something amazing together!',
     }
 };
 
-// Language Switcher Class
+// Language Switcher Class - Single Instance
 class LanguageSwitcher {
     constructor() {
         this.currentLang = 'en';
@@ -380,6 +339,9 @@ class LanguageSwitcher {
         // Update active state on buttons
         document.getElementById('lang-en')?.classList.toggle('active', lang === 'en');
         document.getElementById('lang-pt')?.classList.toggle('active', lang === 'pt');
+        
+        // Dispatch custom event for other components
+        window.dispatchEvent(new CustomEvent('languageChanged', { detail: { lang } }));
     }
     
     updateLanguage() {
@@ -404,18 +366,16 @@ class LanguageSwitcher {
         
         if (enBtn) enBtn.classList.toggle('active', this.currentLang === 'en');
         if (ptBtn) ptBtn.classList.toggle('active', this.currentLang === 'pt');
+        
+        // Update HTML lang attribute
+        document.documentElement.lang = this.currentLang;
     }
     
     updateTypingTexts() {
         const typingElement = document.querySelector('.typing-text');
-        if (typingElement) {
-            const texts = translations[this.currentLang].hero_typing;
-            // Reinitialize typing effect if TypeWriter exists
-            if (typeof TypeWriter !== 'undefined') {
-                // Clear existing typing
-                typingElement.textContent = '';
-                // New typing effect will be created on page load
-            }
+        if (typingElement && window.typeWriter) {
+            const texts = translations[this.currentLang].hero_typing || [];
+            window.typeWriter.updateTexts(texts);
         }
     }
     

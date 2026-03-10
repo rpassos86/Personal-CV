@@ -634,22 +634,6 @@ body {
     100% { background-position: 0% 50%; }
 }
 
-/* Name gradient effect (without glitch) */
-.hero-title .name {
-    background: linear-gradient(135deg, var(--neon-cyan), var(--neon-magenta), var(--neon-cyan));
-    background-size: 200% 200%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    animation: gradient-shift 5s ease infinite;
-}
-
-@keyframes gradient-shift {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
 .hero-tagline {
     font-family: 'Rajdhani', sans-serif;
     font-size: 1.5rem;
